@@ -11,9 +11,10 @@ do
 done
 echo "Done!"
 }
-nsok
+#nsok
 
 runok(){
+sleep 3
 running=$(kubectl get pods  -n monitoring |grep -v NAME| grep -v Running | wc -l)
 while [ $running != "0" ];
 do
