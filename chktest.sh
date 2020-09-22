@@ -1,7 +1,7 @@
 
 nsok(){
 nscreate=$(kubectl get ns monitoring|grep -v NAME |wc -l)
-while { $nscreate != "1" ];
+while [ $nscreate != "1" ];
 do
         nszzz=$((nszzz+1))
         echo "count : $nszzz -> Status : $nscreate"
